@@ -8,20 +8,27 @@
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
 <title>Heng ZHANG - B. M. Work</title>
 <style>
-/* PDF.js 容器 */
-.pdfjs-container {
-  width: 100%;
-  height: 900px;
-  margin: 20px 0;
-  border: 1px solid #ccc;
-}
-
-/* 手机端高度自适应 */
-@media screen and (max-width: 768px) {
-  .pdfjs-container {
-    height: 600px;
+  /* Make the PDF iframe responsive */
+  .pdf-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Aspect ratio 4:3 */
+    margin: 20px 0;
   }
-}
+  .pdf-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* Media query for small devices */
+  @media screen and (max-width: 600px) {
+    .pdf-container {
+      padding-bottom: 100%; /* Adjust the aspect ratio for mobile */
+    }
+  }
 </style>
 </head>
 <body>
@@ -47,24 +54,47 @@
 <h1>Heng ZHANG - B. & M. work (Photo Gallery)</h1>
 </div>
 
-<h2>R&amp;D (Mainly at the stage of B. Eng. and M. Eng.) (Before PhD)</h2>
+<h2>R&amp;D (Mainly at the stage of B. Eng. and M. Eng.)</h2>
 
-<p style="font-size:14px;color:#555;">
-  Interactive PDF viewer (mobile-friendly, swipe to turn pages).
-</p>
-
-<div class="pdfjs-container">
-  <iframe
+<!-- Desktop: iframe preview -->
+<div class="pdf-desktop">
+  <iframe 
     src="files/BMwork.pdf"
-    width="100%"
-    height="100%"
-    style="border:none;"
-    allowfullscreen name="BMwork">
+    width="100%" 
+    height="800"
+    style="border:none;">
   </iframe>
 </div>
+
+<!-- Mobile: open PDF directly -->
+<div class="pdf-mobile">
+  <a href="files/BMwork.pdf" target="_blank"
+     style="font-size:16px; color:#1a4cff;">
+     📄 Tap here to view the PDF (mobile-friendly)
+  </a>
+</div>
+
+<style>
+/* 默认显示桌面版本 */
+.pdf-mobile {
+  display: none;
+}
+
+/* 手机端处理 */
+@media screen and (max-width: 768px) {
+  .pdf-desktop {
+    display: none;
+  }
+  .pdf-mobile {
+    display: block;
+    margin: 20px 0;
+  }
+}
+</style>
+
 <div id="footer">
 <div id="footer0">
-  The truth shall make you free. Last updated on Dec. 17, 2024.</div>
+  The truth shall make you free. Last updated on Dec. 17, 2025.</div>
 </div>
 </td>
 </tr>
