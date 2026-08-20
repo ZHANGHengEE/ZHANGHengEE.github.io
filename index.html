@@ -166,13 +166,26 @@ Computer Engineering</a> <br />
 
 <li>
     <p>
-        <span class="auto-style25">8 Aug. 2026: The ICWPT2026 keynote speech slides are now available. The 
-		slides video can be found on this page, and conference photos are posted on the <a href="activities.html">Activities</a> page. [<a href="files/ICWPT2026.pdf" target="_blank">Download PDF</a>]</span>
+        <span class="auto-style25">8 Aug. 2026: <strong>The ICWPT2026 keynote speech slides are now available</strong>. The 
+		<strong>slides </strong>video can be found on this page, and conference photos are posted on the <a href="activities.html">Activities</a> page. [<a href="files/ICWPT2026.pdf" target="_blank">Download PDF</a>]</span>
     </p>
-    <iframe src="files/ICWPT2026.pdf" width="854" height="480"
-            style="border: 1px solid #ccc; display: block;">
-    </iframe>
+    <!-- 使用 flex 容器实现左右并排 -->
+    <div style="display: flex; gap: 20px; align-items: stretch; flex-wrap: wrap;">
+        <!-- 左侧：PDF 阅读器 -->
+        <div style="flex: 1; min-width: 500px;">
+            <iframe src="files/ICWPT2026.pdf" width="100%" height="480"
+                    style="border: 1px solid #ccc; display: block;">
+            </iframe>
+        </div>
+        <!-- 右侧：图片（Key00.png） -->
+        <div style="flex: 0 0 400px; min-width: 260px;">
+            <img src="img/conference/ICWPT2026/Key00.png" alt="Conference schedule and keynote info"
+                 style="width: 100%; height: 100%; object-fit: contain; border: 1px solid #ccc; display: block;" />
+        </div>
+    </div>
 </li>
+
+
 	<li>
 	<p><span class="auto-style25">7 May. 2026: Zhang H, Mitcheson P D, Lee C K*. Megahertz Soft-Switching Wireless Power Transfer for Capsule Robots Under Dynamic Position and Orientation Variations. 
 	IEEE Journal of Emerging and Selected Topics in Power Electronics, 2026. is published at IEEE JESTPE. 
